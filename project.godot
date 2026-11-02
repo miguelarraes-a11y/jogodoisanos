@@ -18,6 +18,13 @@ config/name="Onde Tudo Começou"
 run/main_scene="res://chapters/prologue/scene_01_um_dia_comum/scene_01.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
+[audio]
+
+general/default_playback_type.web=0
+default_bus_layout="res://default_bus_layout.tres"
+driver/output_latency.web=50
+driver/enable_input=false
+
 [autoload]
 
 GameState="*res://autoload/game_state.gd"

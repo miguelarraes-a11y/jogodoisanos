@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+		<title>$GODOT_PROJECT_NAME</title>
+		<style>
+html, body, #canvas {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	color: white;
+	background-color: #0b0b0e;
+	overflow: hidden;
+	touch-action: none;
+	user-select: none;
+	-webkit-user-select: none;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+#canvas {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#canvas:focus {
+	outline: none;
+}
+
+#status, #status-splash, #status-progress {
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+#status, #status-splash {
+	top: 0;
+	bottom: 0;
+}
+
+#status {
+	background-color: #121216;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+	z-index: 50;
+}
+
+#status-splash {
+	max-height: 80%;
+	max-width: 80%;
+	margin: auto;
+}
+
+#status-splash.show-image--false {
+	display: none;
+}
+
+#status-splash.fullsize--true {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+}
+
+#status-splash.use-filter--false {
+	image-rendering: pixelated;
+}
+
+#status-progress {
+	display: none;
+	bottom: 12%;
+	width: 60%;
+	max-width: 320px;
+	margin: 0 auto;
+	height: 8px;
+	border-radius: 4px;
+	overflow: hidden;
+	accent-color: #e63946;
+}
+
+#status-notice {
+	display: none;
+	background-color: #5b3943;
+	border-radius: 0.5rem;
+	border: 1px solid #9b3943;
+	color: #e0e0e0;
+	line-height: 1.3;
+	margin: 0 2rem;
+	overflow: hidden;
+	padding: 1rem;
+	text-align: center;
+	z-index: 60;
+}
+
+/* Tela de Entrada com Áudio Desbloqueado */
+#audio-start-overlay {
+	position: fixed;
+	inset: 0;
+	background: radial-gradient(circle at center, #1c1c24 0%, #08080b 100%);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
+	color: #ffffff;
+	padding: 20px;
+	box-sizing: border-box;
+	transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+#audio-start-overlay.fade-out {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.start-card {
+	max-width: 380px;
+	width: 90%;
+	background: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(255, 215, 0, 0.3);
+	border-radius: 24px;
+	padding: 32px 24px;
+	box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	text-align: center;
+}
+
+.start-heart {
+	font-size: 42px;
+	margin-bottom: 12px;
+	animation: pulse 1.8s infinite ease-in-out;
+}
+
+@keyframes pulse {
+	0%, 100% { transform: scale(1); }
+	50% { transform: scale(1.15); }
+}
+
+.start-title {
+	font-size: 24px;
+	margin: 0 0 6px 0;
+	color: #fce8cd;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+}
+
+.start-subtitle {
+	font-size: 13px;
+	color: #c4b59d;
+	margin: 0 0 24px 0;
+	line-height: 1.4;
+}
+
+.start-btn {
+	background: linear-gradient(135deg, #e63946 0%, #b5179e 100%);
+	color: #ffffff;
+	border: none;
+	padding: 16px 28px;
+	font-size: 16px;
+	font-weight: 700;
+	border-radius: 50px;
+	cursor: pointer;
+	box-shadow: 0 8px 24px rgba(230, 57, 70, 0.45);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	width: 100%;
+	box-sizing: border-box;
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
+	transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.start-btn:active {
+	transform: scale(0.96);
+}
+
+.start-tip {
+	margin-top: 18px;
+	font-size: 11px;
+	color: rgba(255, 255, 255, 0.55);
+	line-height: 1.4;
+}
+		</style>
+		$HEAD_INCLUDES
+		<script>
+// Captura e desbloqueio de WebAudio API
+(function() {
+	window.__audioContexts = [];
+	const OrigAudioContext = window.AudioContext || window.webkitAudioContext;
+	if (OrigAudioContext) {
+		const origProto = OrigAudioContext.prototype;
+		window.AudioContext = function(...args) {
+			const ctx = new OrigAudioContext(...args);
+			window.__audioContexts.push(ctx);
+			return ctx;
+		};
+		window.AudioContext.prototype = origProto;
+		if (window.webkitAudioContext) {
+			window.webkitAudioContext = window.AudioContext;
+		}
+	}
+
+	window.__unlockAllAudio = function() {
+		for (let i = 0; i < (window.__audioContexts || []).length; i++) {
+			const ctx = window.__audioContexts[i];
+			if (ctx && (ctx.state === 'suspended' || ctx.state === 'interrupted')) {
+				ctx.resume().catch(function() {});
+			}
+		}
+		// Desbloqueio especial para iOS Safari (reprodução de buffer mudo em evento de toque)
+		try {
+			const AudioCtx = window.AudioContext || window.webkitAudioContext;
+			if (AudioCtx) {
+				const dummy = new AudioCtx();
+				if (!window.__audioContexts.includes(dummy)) {
+					window.__audioContexts.push(dummy);
+				}
+				const buf = dummy.createBuffer(1, 1, 22050);
+				const src = dummy.createBufferSource();
+				src.buffer = buf;
+				src.connect(dummy.destination);
+				src.start(0);
+				if (dummy.state === 'suspended') {
+					dummy.resume().catch(function() {});
+				}
+			}
+		} catch (e) {}
+	};
+
+	const unlockEvents = ['touchstart', 'touchend', 'click', 'mousedown', 'keydown', 'pointerdown'];
+	unlockEvents.forEach(function(evt) {
+		window.addEventListener(evt, window.__unlockAllAudio, { passive: true });
+		document.addEventListener(evt, window.__unlockAllAudio, { passive: true });
+	});
+
+	// Reativa áudio quando a aba volta a ficar visível
+	document.addEventListener('visibilitychange', function() {
+		if (!document.hidden) {
+			window.__unlockAllAudio();
+		}
+	});
+	window.addEventListener('focus', function() {
+		window.__unlockAllAudio();
+	});
+})();
+		</script>
+	</head>
+	<body>
+		<canvas id="canvas">
+			Seu navegador não suporta HTML5 Canvas.
+		</canvas>
+
+		<noscript>
+			Por favor, ative o JavaScript para jogar.
+		</noscript>
+
+		<div id="status">
+			<img id="status-splash" class="show-image--true fullsize--true use-filter--true" src="$GODOT_URL.png" alt="">
+			<progress id="status-progress"></progress>
+			<div id="status-notice"></div>
+		</div>
+
+		<!-- Tela de Início / Desbloqueio de Som -->
+		<div id="audio-start-overlay" style="display: none;">
+			<div class="start-card">
+				<div class="start-heart">❤️</div>
+				<h1 class="start-title">Onde Tudo Começou</h1>
+				<p class="start-subtitle">Miguel & Maria Fernanda • Dois Anos</p>
+				<button id="btn-play-game" class="start-btn">
+					▶ Iniciar com Áudio 🎵
+				</button>
+				<div class="start-tip">
+					🔊 Desative o modo silencioso/vibração do aparelho para ouvir a trilha sonora.
+				</div>
+			</div>
+		</div>
+
+		<script src="$GODOT_URL.js"></script>
+		<script>
+const GODOT_CONFIG = $GODOT_CONFIG;
+const GODOT_THREADS_ENABLED = $GODOT_THREADS_ENABLED;
+const engine = new Engine(GODOT_CONFIG);
+
+(function () {
+	const statusOverlay = document.getElementById('status');
+	const statusProgress = document.getElementById('status-progress');
+	const statusNotice = document.getElementById('status-notice');
+	const audioOverlay = document.getElementById('audio-start-overlay');
+	const btnPlay = document.getElementById('btn-play-game');
+	const canvas = document.getElementById('canvas');
+
+	let initializing = true;
+	let statusMode = '';
+
+	function setStatusMode(mode) {
+		if (statusMode === mode || !initializing) {
+			return;
+		}
+		if (mode === 'hidden') {
+			statusOverlay.remove();
+			initializing = false;
+			// Exibe a tela de início para liberar o áudio com toque
+			showAudioStartOverlay();
+			return;
+		}
+		statusOverlay.style.visibility = 'visible';
+		statusProgress.style.display = mode === 'progress' ? 'block' : 'none';
+		statusNotice.style.display = mode === 'notice' ? 'block' : 'none';
+		statusMode = mode;
+	}
+
+	function showAudioStartOverlay() {
+		if (!audioOverlay) return;
+		audioOverlay.style.display = 'flex';
+
+		function startGameWithAudio(e) {
+			if (e) e.stopPropagation();
+			window.__unlockAllAudio();
+			audioOverlay.classList.add('fade-out');
+			setTimeout(function() {
+				audioOverlay.remove();
+				canvas.focus();
+			}, 400);
+		}
+
+		if (btnPlay) {
+			btnPlay.addEventListener('click', startGameWithAudio);
+			btnPlay.addEventListener('touchend', startGameWithAudio);
+		}
+		audioOverlay.addEventListener('click', startGameWithAudio);
+		audioOverlay.addEventListener('touchend', startGameWithAudio);
+	}
+
+	function setStatusNotice(text) {
+		while (statusNotice.lastChild) {
+			statusNotice.removeChild(statusNotice.lastChild);
+		}
+		const lines = text.split('\n');
+		lines.forEach((line) => {
+			statusNotice.appendChild(document.createTextNode(line));
+			statusNotice.appendChild(document.createElement('br'));
+		});
+	}
+
+	function displayFailureNotice(err) {
+		console.error(err);
+		if (err instanceof Error) {
+			setStatusNotice(err.message);
+		} else if (typeof err === 'string') {
+			setStatusNotice(err);
+		} else {
+			setStatusNotice('Um erro ocorreu ao carregar o jogo.');
+		}
+		setStatusMode('notice');
+		initializing = false;
+	}
+
+	const missing = Engine.getMissingFeatures({
+		threads: GODOT_THREADS_ENABLED,
+	});
+
+	if (missing.length !== 0) {
+		const missingMsg = 'Erro\nRecursos necessários não suportados no navegador:\n';
+		displayFailureNotice(missingMsg + missing.join('\n'));
+	} else {
+		setStatusMode('progress');
+		engine.startGame({
+			'onProgress': function (current, total) {
+				if (current > 0 && total > 0) {
+					statusProgress.value = current;
+					statusProgress.max = total;
+				} else {
+					statusProgress.removeAttribute('value');
+					statusProgress.removeAttribute('max');
+				}
+			},
+		}).then(() => {
+			setStatusMode('hidden');
+		}, displayFailureNotice);
+	}
+}());
+		</script>
+	</body>
+</html>

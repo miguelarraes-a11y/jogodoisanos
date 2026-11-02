@@ -77,7 +77,14 @@ func _load_hd_texture(tex_path: String) -> Texture2D:
 	if _texture_cache.has(tex_path):
 		return _texture_cache[tex_path]
 
-	# Carrega o arquivo de imagem original diretamente em memória sem perdas de compressão
+	# Na Web ou no pacote exportado, utiliza o ResourceLoader
+	if OS.has_feature("web") or not OS.has_feature("editor"):
+		if ResourceLoader.exists(tex_path):
+			var tex: Texture2D = load(tex_path)
+			_texture_cache[tex_path] = tex
+			return tex
+
+	# Em desktop local/editor, carrega os bytes brutos sem perdas
 	var global_path := ProjectSettings.globalize_path(tex_path)
 	if FileAccess.file_exists(global_path):
 		var img := Image.load_from_file(global_path)

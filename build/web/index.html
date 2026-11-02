@@ -1,25 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
 		<title>Onde Tudo Começou</title>
 		<style>
 html, body, #canvas {
 	margin: 0;
 	padding: 0;
 	border: 0;
+	width: 100%;
+	height: 100%;
 }
 
 body {
 	color: white;
-	background-color: black;
+	background-color: #0b0b0e;
 	overflow: hidden;
 	touch-action: none;
+	user-select: none;
+	-webkit-user-select: none;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 #canvas {
 	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 #canvas:focus {
@@ -38,17 +48,18 @@ body {
 }
 
 #status {
-	background-color: #242424;
+	background-color: #121216;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	visibility: hidden;
+	z-index: 50;
 }
 
 #status-splash {
-	max-height: 100%;
-	max-width: 100%;
+	max-height: 80%;
+	max-width: 80%;
 	margin: auto;
 }
 
@@ -66,52 +77,221 @@ body {
 	image-rendering: pixelated;
 }
 
-#status-progress, #status-notice {
-	display: none;
-}
-
 #status-progress {
-	bottom: 10%;
-	width: 50%;
+	display: none;
+	bottom: 12%;
+	width: 60%;
+	max-width: 320px;
 	margin: 0 auto;
+	height: 8px;
+	border-radius: 4px;
+	overflow: hidden;
+	accent-color: #e63946;
 }
 
 #status-notice {
+	display: none;
 	background-color: #5b3943;
 	border-radius: 0.5rem;
 	border: 1px solid #9b3943;
 	color: #e0e0e0;
-	font-family: 'Noto Sans', 'Droid Sans', Arial, sans-serif;
 	line-height: 1.3;
 	margin: 0 2rem;
 	overflow: hidden;
 	padding: 1rem;
 	text-align: center;
-	z-index: 1;
+	z-index: 60;
+}
+
+/* Tela de Entrada com Áudio Desbloqueado */
+#audio-start-overlay {
+	position: fixed;
+	inset: 0;
+	background: radial-gradient(circle at center, #1c1c24 0%, #08080b 100%);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
+	color: #ffffff;
+	padding: 20px;
+	box-sizing: border-box;
+	transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+#audio-start-overlay.fade-out {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.start-card {
+	max-width: 380px;
+	width: 90%;
+	background: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(255, 215, 0, 0.3);
+	border-radius: 24px;
+	padding: 32px 24px;
+	box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	text-align: center;
+}
+
+.start-heart {
+	font-size: 42px;
+	margin-bottom: 12px;
+	animation: pulse 1.8s infinite ease-in-out;
+}
+
+@keyframes pulse {
+	0%, 100% { transform: scale(1); }
+	50% { transform: scale(1.15); }
+}
+
+.start-title {
+	font-size: 24px;
+	margin: 0 0 6px 0;
+	color: #fce8cd;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+}
+
+.start-subtitle {
+	font-size: 13px;
+	color: #c4b59d;
+	margin: 0 0 24px 0;
+	line-height: 1.4;
+}
+
+.start-btn {
+	background: linear-gradient(135deg, #e63946 0%, #b5179e 100%);
+	color: #ffffff;
+	border: none;
+	padding: 16px 28px;
+	font-size: 16px;
+	font-weight: 700;
+	border-radius: 50px;
+	cursor: pointer;
+	box-shadow: 0 8px 24px rgba(230, 57, 70, 0.45);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	width: 100%;
+	box-sizing: border-box;
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
+	transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.start-btn:active {
+	transform: scale(0.96);
+}
+
+.start-tip {
+	margin-top: 18px;
+	font-size: 11px;
+	color: rgba(255, 255, 255, 0.55);
+	line-height: 1.4;
 }
 		</style>
-		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
-<link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
+		$HEAD_INCLUDES
+		<script>
+// Captura e desbloqueio de WebAudio API
+(function() {
+	window.__audioContexts = [];
+	const OrigAudioContext = window.AudioContext || window.webkitAudioContext;
+	if (OrigAudioContext) {
+		const origProto = OrigAudioContext.prototype;
+		window.AudioContext = function(...args) {
+			const ctx = new OrigAudioContext(...args);
+			window.__audioContexts.push(ctx);
+			return ctx;
+		};
+		window.AudioContext.prototype = origProto;
+		if (window.webkitAudioContext) {
+			window.webkitAudioContext = window.AudioContext;
+		}
+	}
 
+	window.__unlockAllAudio = function() {
+		for (let i = 0; i < (window.__audioContexts || []).length; i++) {
+			const ctx = window.__audioContexts[i];
+			if (ctx && (ctx.state === 'suspended' || ctx.state === 'interrupted')) {
+				ctx.resume().catch(function() {});
+			}
+		}
+		// Desbloqueio especial para iOS Safari (reprodução de buffer mudo em evento de toque)
+		try {
+			const AudioCtx = window.AudioContext || window.webkitAudioContext;
+			if (AudioCtx) {
+				const dummy = new AudioCtx();
+				if (!window.__audioContexts.includes(dummy)) {
+					window.__audioContexts.push(dummy);
+				}
+				const buf = dummy.createBuffer(1, 1, 22050);
+				const src = dummy.createBufferSource();
+				src.buffer = buf;
+				src.connect(dummy.destination);
+				src.start(0);
+				if (dummy.state === 'suspended') {
+					dummy.resume().catch(function() {});
+				}
+			}
+		} catch (e) {}
+	};
+
+	const unlockEvents = ['touchstart', 'touchend', 'click', 'mousedown', 'keydown', 'pointerdown'];
+	unlockEvents.forEach(function(evt) {
+		window.addEventListener(evt, window.__unlockAllAudio, { passive: true });
+		document.addEventListener(evt, window.__unlockAllAudio, { passive: true });
+	});
+
+	// Reativa áudio quando a aba volta a ficar visível
+	document.addEventListener('visibilitychange', function() {
+		if (!document.hidden) {
+			window.__unlockAllAudio();
+		}
+	});
+	window.addEventListener('focus', function() {
+		window.__unlockAllAudio();
+	});
+})();
+		</script>
 	</head>
 	<body>
 		<canvas id="canvas">
-			Your browser does not support the canvas tag.
+			Seu navegador não suporta HTML5 Canvas.
 		</canvas>
 
 		<noscript>
-			Your browser does not support JavaScript.
+			Por favor, ative o JavaScript para jogar.
 		</noscript>
 
 		<div id="status">
-			<img id="status-splash" class="show-image--true fullsize--true use-filter--true" src="index.png" alt="">
+			<img id="status-splash" class="show-image--true fullsize--true use-filter--true" src="index.js.png" alt="">
 			<progress id="status-progress"></progress>
 			<div id="status-notice"></div>
 		</div>
 
-		<script src="index.js"></script>
+		<!-- Tela de Início / Desbloqueio de Som -->
+		<div id="audio-start-overlay" style="display: none;">
+			<div class="start-card">
+				<div class="start-heart">❤️</div>
+				<h1 class="start-title">Onde Tudo Começou</h1>
+				<p class="start-subtitle">Miguel & Maria Fernanda • Dois Anos</p>
+				<button id="btn-play-game" class="start-btn">
+					▶ Iniciar com Áudio 🎵
+				</button>
+				<div class="start-tip">
+					🔊 Desative o modo silencioso/vibração do aparelho para ouvir a trilha sonora.
+				</div>
+			</div>
+		</div>
+
+		<script src="index.js.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":10475476,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":10477788,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
@@ -119,6 +299,9 @@ const engine = new Engine(GODOT_CONFIG);
 	const statusOverlay = document.getElementById('status');
 	const statusProgress = document.getElementById('status-progress');
 	const statusNotice = document.getElementById('status-notice');
+	const audioOverlay = document.getElementById('audio-start-overlay');
+	const btnPlay = document.getElementById('btn-play-game');
+	const canvas = document.getElementById('canvas');
 
 	let initializing = true;
 	let statusMode = '';
@@ -130,12 +313,36 @@ const engine = new Engine(GODOT_CONFIG);
 		if (mode === 'hidden') {
 			statusOverlay.remove();
 			initializing = false;
+			// Exibe a tela de início para liberar o áudio com toque
+			showAudioStartOverlay();
 			return;
 		}
 		statusOverlay.style.visibility = 'visible';
 		statusProgress.style.display = mode === 'progress' ? 'block' : 'none';
 		statusNotice.style.display = mode === 'notice' ? 'block' : 'none';
 		statusMode = mode;
+	}
+
+	function showAudioStartOverlay() {
+		if (!audioOverlay) return;
+		audioOverlay.style.display = 'flex';
+
+		function startGameWithAudio(e) {
+			if (e) e.stopPropagation();
+			window.__unlockAllAudio();
+			audioOverlay.classList.add('fade-out');
+			setTimeout(function() {
+				audioOverlay.remove();
+				canvas.focus();
+			}, 400);
+		}
+
+		if (btnPlay) {
+			btnPlay.addEventListener('click', startGameWithAudio);
+			btnPlay.addEventListener('touchend', startGameWithAudio);
+		}
+		audioOverlay.addEventListener('click', startGameWithAudio);
+		audioOverlay.addEventListener('touchend', startGameWithAudio);
 	}
 
 	function setStatusNotice(text) {
@@ -156,7 +363,7 @@ const engine = new Engine(GODOT_CONFIG);
 		} else if (typeof err === 'string') {
 			setStatusNotice(err);
 		} else {
-			setStatusNotice('An unknown error occurred.');
+			setStatusNotice('Um erro ocorreu ao carregar o jogo.');
 		}
 		setStatusMode('notice');
 		initializing = false;
@@ -167,36 +374,8 @@ const engine = new Engine(GODOT_CONFIG);
 	});
 
 	if (missing.length !== 0) {
-		if (GODOT_CONFIG['serviceWorker'] && GODOT_CONFIG['ensureCrossOriginIsolationHeaders'] && 'serviceWorker' in navigator) {
-			let serviceWorkerRegistrationPromise;
-			try {
-				serviceWorkerRegistrationPromise = navigator.serviceWorker.getRegistration();
-			} catch (err) {
-				serviceWorkerRegistrationPromise = Promise.reject(new Error('Service worker registration failed.'));
-			}
-			// There's a chance that installing the service worker would fix the issue
-			Promise.race([
-				serviceWorkerRegistrationPromise.then((registration) => {
-					if (registration != null) {
-						return Promise.reject(new Error('Service worker already exists.'));
-					}
-					return registration;
-				}).then(() => engine.installServiceWorker()),
-				// For some reason, `getRegistration()` can stall
-				new Promise((resolve) => {
-					setTimeout(() => resolve(), 2000);
-				}),
-			]).then(() => {
-				// Reload if there was no error.
-				window.location.reload();
-			}).catch((err) => {
-				console.error('Error while registering service worker:', err);
-			});
-		} else {
-			// Display the message as usual
-			const missingMsg = 'Error\nThe following features required to run Godot projects on the Web are missing:\n';
-			displayFailureNotice(missingMsg + missing.join('\n'));
-		}
+		const missingMsg = 'Erro\nRecursos necessários não suportados no navegador:\n';
+		displayFailureNotice(missingMsg + missing.join('\n'));
 	} else {
 		setStatusMode('progress');
 		engine.startGame({

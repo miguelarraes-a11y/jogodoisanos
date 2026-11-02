@@ -1,15 +1,49 @@
 extends Node
 ## Música e efeitos com volumes separados (barramentos "Music" e "SFX").
-## Os arquivos ficam em assets/audio/<nome>.wav. Troque pelos finais mantendo o nome.
+## Os arquivos ficam em assets/audio/<nome>.wav.
+## Inclui suporte a desbloqueio de áudio web (WebAudio autoplay policy).
 
 const AUDIO_DIR := "res://assets/audio/"
 
 var _music: AudioStreamPlayer
+var _current_music_name := ""
+var _current_music_volume := -6.0
+var _audio_unlocked := false
 
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	_ensure_bus("Music")
 	_ensure_bus("SFX")
+	if OS.has_feature("web"):
+		AudioServer.set("driver/output_latency", 50)
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	if not _audio_unlocked:
+		if event is InputEventMouseButton or event is InputEventScreenTouch or event is InputEventKey:
+			if event.is_pressed():
+				_unlock_audio()
+
+
+func _unlock_audio() -> void:
+	_audio_unlocked = true
+	# Garante que nenhum barramento está mutado
+	for i in AudioServer.bus_count:
+		AudioServer.set_bus_mute(i, false)
+
+	# Se estiver na web, chama o desbloqueador WebAudio do navegador
+	if OS.has_feature("web"):
+		var js := """
+			if (window.__unlockAllAudio) {
+				window.__unlockAllAudio();
+			}
+		"""
+		JavaScriptBridge.eval(js)
+
+	# Se a música deveria estar tocando mas foi suspensa ou interrompida, retoma
+	if _music != null and is_instance_valid(_music) and not _music.playing:
+		_music.play()
 
 
 func _ensure_bus(bus_name: String) -> void:
@@ -52,6 +86,9 @@ func stop_player(p: AudioStreamPlayer, fade: float = 0.5) -> void:
 		return
 	if p.finished.is_connected(p.play):
 		p.finished.disconnect(p.play)
+	if fade <= 0.0:
+		p.queue_free()
+		return
 	var t := create_tween()
 	t.tween_property(p, "volume_db", -60.0, fade)
 	await t.finished
@@ -60,6 +97,8 @@ func stop_player(p: AudioStreamPlayer, fade: float = 0.5) -> void:
 
 
 func play_music(sound_name: String, fade: float = 1.5, volume_db: float = -6.0) -> void:
+	_current_music_name = sound_name
+	_current_music_volume = volume_db
 	stop_music(fade)
 	var stream := _load_stream(sound_name)
 	if stream == null:
@@ -67,12 +106,17 @@ func play_music(sound_name: String, fade: float = 1.5, volume_db: float = -6.0) 
 	var p := AudioStreamPlayer.new()
 	p.stream = stream
 	p.bus = "Music"
-	p.volume_db = -60.0
+	# Evita silêncio absoluto (-60 dB) que pode congelar na web antes do tween
+	if fade > 0.0:
+		p.volume_db = volume_db - 12.0
+	else:
+		p.volume_db = volume_db
 	add_child(p)
 	p.finished.connect(p.play)
 	p.play()
-	var t := create_tween()
-	t.tween_property(p, "volume_db", volume_db, fade)
+	if fade > 0.0:
+		var t := create_tween()
+		t.tween_property(p, "volume_db", volume_db, fade)
 	_music = p
 
 
@@ -84,8 +128,12 @@ func stop_music(fade: float = 1.0) -> void:
 
 
 func set_music_volume(linear: float) -> void:
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), linear_to_db(maxf(linear, 0.0001)))
+	var idx := AudioServer.get_bus_index("Music")
+	if idx != -1:
+		AudioServer.set_bus_volume_db(idx, linear_to_db(maxf(linear, 0.0001)))
 
 
 func set_sfx_volume(linear: float) -> void:
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), linear_to_db(maxf(linear, 0.0001)))
+	var idx := AudioServer.get_bus_index("SFX")
+	if idx != -1:
+		AudioServer.set_bus_volume_db(idx, linear_to_db(maxf(linear, 0.0001)))
