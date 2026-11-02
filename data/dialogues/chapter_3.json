@@ -1,0 +1,58 @@
+{
+  "_comentario": "Falas do Capítulo 3 — Mais Perto de Você. Todas as falas com 'revisar': true para revisão fiel.",
+  "cena_01_marcando_encontro": [
+    {"id": "c3_s1_miguel_msg1", "speaker": "Miguel", "text": "Oi! Tava pensando... você tá livre hoje à tarde?", "revisar": true},
+    {"id": "c3_s1_maria_msg1", "speaker": "Maria Fernanda", "text": "Oi, Miguel! Tô sim, acabei de terminar as coisas da escola.", "revisar": true},
+    {"id": "c3_s1_miguel_msg2", "speaker": "Miguel", "text": "Bora se ver? Tem um lugar bem tranquilo perto da praça, com um banco de pedra na sombra.", "revisar": true},
+    {"id": "c3_s1_maria_msg2", "speaker": "Maria Fernanda", "text": "Adorei a ideia! Te encontro lá daqui a pouquinho :)", "revisar": true}
+  ],
+  "cena_02_o_novo_encontro": [
+    {"id": "c3_s2_miguel_oi", "speaker": "Miguel", "text": "Oi! Que bom te ver de novo.", "revisar": true},
+    {"id": "c3_s2_maria_oi", "speaker": "Maria Fernanda", "text": "Oi, Miguel! Tava com saudades já.", "revisar": true},
+    {"id": "c3_s2_miguel_caminho", "speaker": "Miguel", "text": "Vem, o banco de pedra fica logo ali sob as árvores.", "revisar": true},
+    {"id": "c3_s2_maria_vamos", "speaker": "Maria Fernanda", "text": "Vamos! O dia tá lindo hoje.", "revisar": true}
+  ],
+  "cena_03_banco_de_pedra": [
+    {"id": "c3_s3_banco_sentei", "speaker": "Maria Fernanda", "text": "Nossa, esse lugar é super gostoso e fresquinho!", "revisar": true},
+    {"id": "c3_s3_pergunta_dia", "speaker": "Maria Fernanda", "text": "Como foi a sua semana lá no SESI?", "revisar": true},
+    {"id": "c3_s3_opcao_timida", "speaker": "Miguel", "text": "Foi tranquila... Mas confesso que passei a semana toda esperando hoje.", "revisar": true},
+    {"id": "c3_s3_opcao_engracada", "speaker": "Miguel", "text": "Puxada! O professor passou mil contas, mas sobrevivi pensando no nosso encontro haha.", "revisar": true},
+    {"id": "c3_s3_opcao_carinhosa", "speaker": "Miguel", "text": "Foi boa, mas nada se compara a estar aqui sentadinho com você.", "revisar": true},
+    {"id": "c3_s3_maria_reacao_semana", "speaker": "Maria Fernanda", "text": "Haha no Liceu também foi corrido, mas quando a gente se encontra tudo fica tão calmo...", "revisar": true},
+    {"id": "c3_s3_pergunta_pets", "speaker": "Maria Fernanda", "text": "E o buldogue e o gatinho cinza, como estão?", "revisar": true},
+    {"id": "c3_s3_miguel_pets_fala", "speaker": "Miguel", "text": "Preguiçosos como sempre! O buldogue dormiu no meu pé ontem e o gato vive na janela.", "revisar": true},
+    {"id": "c3_s3_maria_carinho", "speaker": "Maria Fernanda", "text": "Eu acho tão lindo o carinho que você tem por eles...", "revisar": true},
+    {"id": "c3_s3_momento_conexao", "speaker": "Maria Fernanda", "text": "Sabe, Miguel... Cada vez que a gente se vê, parece que a gente fica mais perto um do outro.", "revisar": true},
+    {"id": "c3_s3_miguel_concorda", "speaker": "Miguel", "text": "Eu sinto exatamente a mesma coisa, Maria. É especial demais estar aqui com você.", "revisar": true}
+  ],
+  "cena_04_tirando_fotos": [
+    {"id": "c3_s4_ideia_foto", "speaker": "Maria Fernanda", "text": "A gente precisa registrar esse dia! Vamos tirar uma foto juntos?", "revisar": true},
+    {"id": "c3_s4_miguel_topa", "speaker": "Miguel", "text": "Bora! Deixa eu ajeitar o cabelo haha.", "revisar": true},
+    {"id": "c3_s4_maria_ajeita", "speaker": "Maria Fernanda", "text": "Vem cá, fica bem pertinho... Sorri!", "revisar": true},
+    {"id": "c3_s4_foto_sucesso", "speaker": "Maria Fernanda", "text": "Ficou linda demais! Olha esse sorrisão nosso!", "revisar": true},
+    {"id": "c3_s4_miguel_gostou", "speaker": "Miguel", "text": "Essa foto vai ficar guardada pra sempre comigo.", "revisar": true}
+  ],
+  "cena_05_o_beijo": [
+    {"id": "c3_s5_silencio_intimo", "speaker": "Miguel", "text": "Você fica ainda mais linda quando sorri assim...", "revisar": true},
+    {"id": "c3_s5_maria_olhar", "speaker": "Maria Fernanda", "text": "Miguel...", "revisar": true},
+    {"id": "c3_s5_beijo_narracao", "speaker": "", "text": "Os olhares se cruzam em um instante de pura cumplicidade e silêncio... até que os lábios se encontram em um beijo doce, intenso e inesquecível.", "revisar": true},
+    {"id": "c3_s5_pos_beijo_maria", "speaker": "Maria Fernanda", "text": "Nossa... meu coração tá disparado.", "revisar": true},
+    {"id": "c3_s5_pos_beijo_miguel", "speaker": "Miguel", "text": "O meu também... Que momento perfeito.", "revisar": true}
+  ],
+  "cena_06_caminhada_avo": [
+    {"id": "c3_s6_tarde_fim", "speaker": "Maria Fernanda", "text": "O tempo voa quando a gente tá junto... Minha avó já deve estar esperando.", "revisar": true},
+    {"id": "c3_s6_miguel_acompanha", "speaker": "Miguel", "text": "Vem, eu te levo até lá.", "revisar": true},
+    {"id": "c3_s6_maria_sorriso", "speaker": "Maria Fernanda", "text": "Eu não queria que essa tarde acabasse...", "revisar": true}
+  ],
+  "cena_07_despedida_avo": [
+    {"id": "c3_s7_portao", "speaker": "Maria Fernanda", "text": "É aqui...", "revisar": true},
+    {"id": "c3_s7_miguel_despedida", "speaker": "Miguel", "text": "Obrigado por hoje, Maria. Foi maravilhoso.", "revisar": true},
+    {"id": "c3_s7_maria_despedida", "speaker": "Maria Fernanda", "text": "Para mim também, Miguel. Não vejo a hora de te ver de novo.", "revisar": true},
+    {"id": "c3_s7_beijo_despedida", "speaker": "", "text": "Um abraço demorado e acolhedor, selado com um último beijo carinhoso em frente ao portão.", "revisar": true},
+    {"id": "c3_s7_tchau", "speaker": "Maria Fernanda", "text": "Me avisa quando chegar em casa, tá? Beijo...", "revisar": true}
+  ],
+  "cena_08_encerramento": [
+    {"id": "c3_s8_miguel_feliz", "speaker": "Miguel", "text": "Mais perto de você a cada dia...", "revisar": true},
+    {"id": "c3_s8_fim_texto", "speaker": "", "text": "E assim, sentados no banco de pedra, aquele novo encontro transformou o carinho em certeza...", "revisar": true}
+  ]
+}

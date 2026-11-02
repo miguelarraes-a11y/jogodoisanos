@@ -1,0 +1,26 @@
+{
+  "_comentario": "Falas e textos do Capítulo Final — A Melhor Escolha da Minha Vida.",
+  "cena_01_o_pedido_de_namoro": [
+    {"id": "cfinal_s1_caminhada", "speaker": "Miguel", "text": "O dia tá tão calmo e especial hoje..."},
+    {"id": "cfinal_s1_maria_concorda", "speaker": "Maria Fernanda", "text": "Tá mesmo... Adoro quando a gente caminha assim juntinhos."},
+    {"id": "cfinal_s1_pedido_miguel", "speaker": "Miguel", "text": "Você quer namorar comigo?"},
+    {"id": "cfinal_s1_resposta_maria", "speaker": "Maria Fernanda", "text": "Sim!"}
+  ],
+  "retrospectiva": [
+    {"id": "cfinal_s3_data_inicio", "speaker": "", "text": "03/11/2024"},
+    {"id": "cfinal_s3_subtitulo", "speaker": "", "text": "O primeiro dia da nossa história juntos."},
+    {"id": "cfinal_s5_msg_1", "speaker": "", "text": "Meu amor, muito obrigado pelo tempo que passamos juntos."},
+    {"id": "cfinal_s5_msg_2", "speaker": "", "text": "Cada momento foi incrível, e eu te amo cada vez mais."},
+    {"id": "cfinal_s5_um_ano", "speaker": "", "text": "Já se passou um ano..."},
+    {"id": "cfinal_s5_data_1ano", "speaker": "", "text": "03/11/2025"},
+    {"id": "cfinal_s6_e_agora", "speaker": "", "text": "E agora..."},
+    {"id": "cfinal_s6_dois_anos", "speaker": "", "text": "FINALMENTE 2 ANOS!!!!"},
+    {"id": "cfinal_s6_data_2anos", "speaker": "", "text": "03/11/2026"},
+    {"id": "cfinal_s7_dec1", "speaker": "", "text": "Dois anos desde a melhor escolha da minha vida, que foi te pedir em namoro."},
+    {"id": "cfinal_s7_dec2", "speaker": "", "text": "Muito obrigado, meu amor, por ser essa mulher incrível e por sempre estar ao meu lado."},
+    {"id": "cfinal_s7_dec3", "speaker": "", "text": "Eu te amo mais e mais, para sempre."},
+    {"id": "cfinal_s7_dec4", "speaker": "", "text": "Esses são 2 de muitos anos juntos."},
+    {"id": "cfinal_s8_nomes", "speaker": "", "text": "Miguel & Maria Fernanda ∞"},
+    {"id": "cfinal_s8_final", "speaker": "", "text": "Eu te amo para sempre, meu amor. ❤️"}
+  ]
+}

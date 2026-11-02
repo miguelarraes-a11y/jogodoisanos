@@ -1,0 +1,9 @@
+{
+  "_comentario": "Ajustes do minigame de São Cosme e Damião (Corrida dos Doces). Mude os números sem mexer no código.",
+  "show_intro": true,
+  "duration": 60.0,
+  "points_per_bag": 1,
+  "candy_per_house": 4,
+  "friend_speed": 46.0,
+  "results_seconds": 5.0
+}

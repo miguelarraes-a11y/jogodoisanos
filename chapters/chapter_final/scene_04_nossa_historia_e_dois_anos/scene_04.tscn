@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://chfinals04sceneuid"]
+
+[ext_resource type="Script" path="res://chapters/chapter_final/scene_04_nossa_historia_e_dois_anos/scene_04.gd" id="1_chfins4"]
+
+[node name="Scene04" type="Node"]
+script = ExtResource("1_chfins4")

@@ -1,0 +1,72 @@
+{
+  "id": "chapter_4",
+  "title": "CAPÍTULO 4 — PEDALANDO JUNTOS",
+  "scenes": [
+    {
+      "id": "scene_01",
+      "name": "Um novo passeio",
+      "path": "res://chapters/chapter_4/scene_01_um_novo_passeio/scene_01.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_02",
+      "name": "O reencontro e o beijo",
+      "path": "res://chapters/chapter_4/scene_02_o_reencontro_e_beijo/scene_02.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_03",
+      "name": "Viagem de ônibus",
+      "path": "res://chapters/chapter_4/scene_03_viagem_onibus/scene_03.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_04",
+      "name": "Chegada ao Parque de Exposições",
+      "path": "res://chapters/chapter_4/scene_04_chegada_parque/scene_04.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_05",
+      "name": "Passeio de bicicleta",
+      "path": "res://chapters/chapter_4/scene_05_passeio_bicicleta/scene_05.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_06",
+      "name": "Minigame: Corrida de bicicleta",
+      "path": "res://chapters/chapter_4/scene_06_corrida_bicicleta/scene_06.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_07",
+      "name": "Voltando para casa",
+      "path": "res://chapters/chapter_4/scene_07_voltando_para_casa/scene_07.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_08",
+      "name": "Passagem do tempo",
+      "path": "res://chapters/chapter_4/scene_08_passagem_tempo/scene_08.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_09",
+      "name": "Maria Fernanda conhece a família de Miguel",
+      "path": "res://chapters/chapter_4/scene_09_familia_miguel/scene_09.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_10",
+      "name": "Miguel conhece a família de Maria Fernanda",
+      "path": "res://chapters/chapter_4/scene_10_familia_maria/scene_10.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_11",
+      "name": "Encerramento do capítulo",
+      "path": "res://chapters/chapter_4/scene_11_encerramento/scene_11.tscn",
+      "status": "concluida"
+    }
+  ]
+}

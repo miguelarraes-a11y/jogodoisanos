@@ -1,0 +1,70 @@
+{
+  "_comentario": "Falas do Capítulo 4 — Pedalando Juntos. Todas as falas com 'revisar': true para revisão fiel pelo autor.",
+  "cena_01_um_novo_passeio": [
+    {"id": "c4_s1_miguel_msg1", "speaker": "Miguel", "text": "Oi! O que acha da gente fazer um passeio diferente hoje à tarde?", "revisar": true},
+    {"id": "c4_s1_maria_msg1", "speaker": "Maria Fernanda", "text": "Oi, Miguel! Adorei a ideia! Tava querendo muito sair. Pra onde a gente vai?", "revisar": true},
+    {"id": "c4_s1_miguel_msg2", "speaker": "Miguel", "text": "Pensei na gente pegar o ônibus e ir até o Parque de Exposições em Itaipava pra andar de bicicleta!", "revisar": true},
+    {"id": "c4_s1_maria_msg2", "speaker": "Maria Fernanda", "text": "Nossa, perfeito! Eu amo andar de bicicleta. Te encontro no ponto daqui a pouco!", "revisar": true}
+  ],
+  "cena_02_o_reencontro_e_beijo": [
+    {"id": "c4_s2_miguel_chegada", "speaker": "Miguel", "text": "O dia abriu certinho... Ela já deve estar chegando.", "revisar": true},
+    {"id": "c4_s2_maria_oi", "speaker": "Maria Fernanda", "text": "Oi, Miguel!", "revisar": true},
+    {"id": "c4_s2_miguel_oi", "speaker": "Miguel", "text": "Oi! Que bom te ver...", "revisar": true},
+    {"id": "c4_s2_beijo_narracao", "speaker": "", "text": "Um beijo suave e acolhedor sela o reencontro carinhoso na calçada.", "revisar": true},
+    {"id": "c4_s2_onibus_chegando", "speaker": "Miguel", "text": "Olha lá, nosso ônibus acabou de apontar na esquina.", "revisar": true},
+    {"id": "c4_s2_maria_vamos", "speaker": "Maria Fernanda", "text": "Bora embarcar!", "revisar": true}
+  ],
+  "cena_03_viagem_onibus": [
+    {"id": "c4_s3_janela_inicio", "speaker": "Maria Fernanda", "text": "Adoro passear de ônibus olhando a paisagem pela janela...", "revisar": true},
+    {"id": "c4_s3_opcao_serra_a", "speaker": "Miguel", "text": "Essa subida pra Itaipava tem uma vista linda das montanhas.", "revisar": true},
+    {"id": "c4_s3_opcao_serra_b", "speaker": "Miguel", "text": "O melhor da viagem é estar aqui do seu lado conversando.", "revisar": true},
+    {"id": "c4_s3_maria_resposta", "speaker": "Maria Fernanda", "text": "Haha com certeza! O tempo voa quando a gente tá junto.", "revisar": true},
+    {"id": "c4_s3_chegando_parque", "speaker": "Miguel", "text": "Ó, o Parque de Exposições é na próxima parada. Vamos descer!", "revisar": true}
+  ],
+  "cena_04_chegada_parque": [
+    {"id": "c4_s4_vista_parque", "speaker": "Maria Fernanda", "text": "Nossa, olha o tamanho desse parque! E a pista de asfalto é ótima pra pedalar.", "revisar": true},
+    {"id": "c4_s4_miguel_bikes", "speaker": "Miguel", "text": "Vem, ali tem as bicicletas pra gente pegar.", "revisar": true},
+    {"id": "c4_s4_maria_animada", "speaker": "Maria Fernanda", "text": "Tô pronta! Quero ver se você pedala bem mesmo haha.", "revisar": true}
+  ],
+  "cena_05_passeio_bicicleta": [
+    {"id": "c4_s5_dica_pedal", "speaker": "Miguel", "text": "O vento no rosto tá bom demais!", "revisar": true},
+    {"id": "c4_s5_maria_adorando", "speaker": "Maria Fernanda", "text": "É muito gostoso pedalar nessa pista larga sob a sombra das árvores!", "revisar": true}
+  ],
+  "cena_06_corrida_bicicleta": [
+    {"id": "c4_s6_desafio_maria", "speaker": "Maria Fernanda", "text": "Ei, Miguel! O que você acha de uma corrida até o final daquela reta?", "revisar": true},
+    {"id": "c4_s6_miguel_aceita", "speaker": "Miguel", "text": "Desafio aceito! Quero ver me alcançar haha!", "revisar": true},
+    {"id": "c4_s6_contagem", "speaker": "", "text": "3... 2... 1... JÁ!", "revisar": true},
+    {"id": "c4_s6_vitoria_miguel", "speaker": "", "text": "Miguel cruza a linha de chegada na frente! Miguel venceu!", "revisar": true},
+    {"id": "c4_s6_vitoria_maria", "speaker": "", "text": "Maria Fernanda acelera com tudo e cruza a linha primeiro! Maria Fernanda venceu!", "revisar": true},
+    {"id": "c4_s6_pos_corrida_maria", "speaker": "Maria Fernanda", "text": "Ufa! Que corrida boa! Tô até sem fôlego haha.", "revisar": true},
+    {"id": "c4_s6_pos_corrida_miguel", "speaker": "Miguel", "text": "Você pedala rápido demais! Foi muito divertido!", "revisar": true}
+  ],
+  "cena_07_voltando_para_casa": [
+    {"id": "c4_s7_fim_tarde", "speaker": "Maria Fernanda", "text": "O sol já tá baixando... A tarde passou voando.", "revisar": true},
+    {"id": "c4_s7_miguel_vamos", "speaker": "Miguel", "text": "Vem, vamos deixar as bikes e pegar o ônibus de volta.", "revisar": true},
+    {"id": "c4_s7_despedida_onibus", "speaker": "Miguel", "text": "Obrigado pelo passeio hoje. Foi um dos dias mais legais.", "revisar": true},
+    {"id": "c4_s7_maria_carinho", "speaker": "Maria Fernanda", "text": "Pra mim também, Miguel. Eu amei cada minuto.", "revisar": true}
+  ],
+  "cena_08_passagem_tempo": [
+    {"id": "c4_s8_passagem_tempo", "speaker": "", "text": "Com o passar do tempo, as conversas e passeios foram se transformando em algo cada vez mais profundo...", "revisar": true}
+  ],
+  "cena_09_familia_miguel": [
+    {"id": "c4_s9_chegada_maria", "speaker": "Miguel", "text": "Entra, Maria! Fica super à vontade.", "revisar": true},
+    {"id": "c4_s9_apresentacao_miguel", "speaker": "Miguel", "text": "Pessoal, essa é a Maria Fernanda que eu tanto falo!", "revisar": true},
+    {"id": "c4_s9_familiar_miguel_1", "speaker": "Família de Miguel", "text": "Muito prazer, Maria! O Miguel fala de você com um brilho no olho.", "revisar": true},
+    {"id": "c4_s9_maria_timida_feliz", "speaker": "Maria Fernanda", "text": "O prazer é meu! O cachorro e o gatinho são ainda mais fofos do que ele me contou!", "revisar": true},
+    {"id": "c4_s9_ambiente_acolhedor", "speaker": "", "text": "Uma tarde acolhedora de risadas, histórias e carinho familiar.", "revisar": true}
+  ],
+  "cena_10_familia_maria": [
+    {"id": "c4_s10_chegada_miguel", "speaker": "Maria Fernanda", "text": "Vem, Miguel, pode entrar!", "revisar": true},
+    {"id": "c4_s10_apresentacao_maria", "speaker": "Maria Fernanda", "text": "Gente, esse é o Miguel.", "revisar": true},
+    {"id": "c4_s10_familiar_maria_1", "speaker": "Família de Maria", "text": "Bem-vindo, Miguel! Estávamos muito curiosos para te conhecer pessoalmente.", "revisar": true},
+    {"id": "c4_s10_miguel_agradecido", "speaker": "Miguel", "text": "Muito obrigado por me receberem com tanto carinho!", "revisar": true},
+    {"id": "c4_s10_ambiente_familia", "speaker": "", "text": "Entre um café e boas conversas, os laços foram se estreitando com naturalidade e afeto.", "revisar": true}
+  ],
+  "cena_11_encerramento": [
+    {"id": "c4_s11_momento_juntos", "speaker": "Miguel", "text": "Cada momento que a gente passa juntos faz tudo ter mais sentido.", "revisar": true},
+    {"id": "c4_s11_maria_sorriso", "speaker": "Maria Fernanda", "text": "Eu não consigo mais imaginar meus dias sem você...", "revisar": true},
+    {"id": "c4_s11_fim_texto", "speaker": "", "text": "E o que começou em um olhar na calçada de Petrópolis se tornava uma história de amor para toda a vida...", "revisar": true}
+  ]
+}

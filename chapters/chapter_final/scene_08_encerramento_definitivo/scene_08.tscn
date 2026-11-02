@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://chfinals08sceneuid"]
+
+[ext_resource type="Script" path="res://chapters/chapter_final/scene_08_encerramento_definitivo/scene_08.gd" id="1_chfins8"]
+
+[node name="Scene08" type="Node"]
+script = ExtResource("1_chfins8")

@@ -1,0 +1,17 @@
+{
+  "_comentario": "Ajustes do minigame de basquete. Mude os números sem mexer no código.",
+  "show_intro": true,
+  "shots": 5,
+  "points_per_basket": 10,
+  "basket_radius": 9.0,
+  "max_range": 130.0,
+  "power_speed": 1.1,
+  "aim_speed": 0.9,
+  "aim_limit": 0.7,
+  "show_power_hint": true,
+  "flight_time": 1.0,
+  "arc_height": 40.0,
+  "rim_height": 34.0,
+  "results_seconds": 4.0,
+  "spots": [[160, 150], [118, 142], [204, 142], [140, 132], [182, 132]]
+}

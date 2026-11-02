@@ -1,0 +1,75 @@
+{
+  "_comentario": "Falas do Capítulo 2 — O Primeiro Encontro. 'revisar': true = redação provisória para ajuste posterior.",
+  "cena_01_encontro": [
+    {"id": "c2_s1_miguel_1", "speaker": "Miguel", "text": "Oi... Você tá muito bonita.", "revisar": true},
+    {"id": "c2_s1_maria_1", "speaker": "Maria Fernanda", "text": "Oi, Miguel! Obrigada... Você também tá arrumado. Vamos?", "revisar": true},
+    {"id": "c2_s1_miguel_2", "speaker": "Miguel", "text": "Vamos sim! Conheço um lugar ótimo aqui pertinho.", "revisar": true}
+  ],
+  "cena_02_caminhada": [
+    {"id": "c2_s2_miguel_1", "speaker": "Miguel", "text": "O dia tá bem agradável hoje.", "revisar": true},
+    {"id": "c2_s2_maria_1", "speaker": "Maria Fernanda", "text": "Tá mesmo! Tava ansiosa pra gente se ver.", "revisar": true},
+    {"id": "c2_s2_miguel_2", "speaker": "Miguel", "text": "Eu também tava... Fiquei pensando a semana toda.", "revisar": true}
+  ],
+  "cena_03_pedido": [
+    {"id": "c2_s3_atendente", "speaker": "Atendente", "text": "Boa tarde! O que vão pedir hoje?", "revisar": true},
+    {"id": "c2_s3_miguel_pedido", "speaker": "Miguel", "text": "Deixa eu montar o nosso açaí...", "revisar": true}
+  ],
+  "cena_04_conversa": [
+    {"id": "c2_s4_inicio", "speaker": "Maria Fernanda", "text": "Nossa, esse açaí tá uma delícia!", "revisar": true},
+    {"id": "c2_s4_escola_maria", "speaker": "Maria Fernanda", "text": "Você estuda em qual colégio mesmo?", "revisar": true},
+    {"id": "c2_s4_escola_miguel_a", "speaker": "Miguel", "text": "Eu estudo lá no SESI! É bem puxado, mas até que eu gosto.", "revisar": true},
+    {"id": "c2_s4_escola_miguel_b", "speaker": "Miguel", "text": "Tô no SESI. A galera de lá é gente boa!", "revisar": true},
+    {"id": "c2_s4_maria_liceu", "speaker": "Maria Fernanda", "text": "Legal! Eu estudo no Liceu. A rotina lá também é cheia, mas minhas amigas tão sempre comigo.", "revisar": true},
+    {"id": "c2_s4_pets_intro", "speaker": "Maria Fernanda", "text": "Você tem bichinho em casa?", "revisar": true},
+    {"id": "c2_s4_miguel_pets_a", "speaker": "Miguel", "text": "Tenho dois! Um buldogue preto que é super preguiçoso e um gato cinza curioso.", "revisar": true},
+    {"id": "c2_s4_miguel_pets_b", "speaker": "Miguel", "text": "Tenho um buldogue preto e um gato cinza! Os dois vivem deitados na sala comigo haha.", "revisar": true},
+    {"id": "c2_s4_maria_pets", "speaker": "Maria Fernanda", "text": "Ai, que fofos! Eu adoro animais. Um dia quero conhecer eles!", "revisar": true},
+    {"id": "c2_s4_rotina", "speaker": "Maria Fernanda", "text": "Tô achando muito bom conversar com você pessoalmente, sabia? Pelo WhatsApp é legal, mas aqui é bem melhor.", "revisar": true},
+    {"id": "c2_s4_miguel_gostando_a", "speaker": "Miguel", "text": "Também acho! O tempo tá voando aqui com você.", "revisar": true},
+    {"id": "c2_s4_miguel_gostando_b", "speaker": "Miguel", "text": "Nem me fale... Tô muito feliz que você aceitou vir.", "revisar": true}
+  ],
+  "cena_05_quadra_decisao": [
+    {"id": "c2_s5_acabou", "speaker": "Miguel", "text": "Raspamos a tigela haha!", "revisar": true},
+    {"id": "c2_s5_proposta_miguel", "speaker": "Miguel", "text": "Quer dar uma passada na quadra coberta aqui do bairro? Fica no caminho.", "revisar": true},
+    {"id": "c2_s5_aceite_maria", "speaker": "Maria Fernanda", "text": "Bora! Mas só se você me ensinar a arremessar direitinho!", "revisar": true},
+    {"id": "c2_s5_miguel_promessa", "speaker": "Miguel", "text": "Prometo que sou um bom professor haha!", "revisar": true}
+  ],
+  "cena_07_basquete": [
+    {"id": "c2_s7_chegada", "speaker": "Miguel", "text": "Aqui é a quadra onde eu treino.", "revisar": true},
+    {"id": "c2_s7_portao_fechado", "speaker": "Miguel", "text": "Ih... o portão da quadra tá trancado com corrente.", "revisar": true},
+    {"id": "c2_s7_maria_e_agora", "speaker": "Maria Fernanda", "text": "Poxa, tá fechada mesmo... E agora? A gente vai embora?", "revisar": true},
+    {"id": "c2_s7_miguel_pular", "speaker": "Miguel", "text": "Nada disso... Bora pular o portão!", "revisar": true},
+    {"id": "c2_s7_maria_duvida", "speaker": "Maria Fernanda", "text": "Pular o portão?! Haha você tem certeza disso?", "revisar": true},
+    {"id": "c2_s7_miguel_pezinho", "speaker": "Miguel", "text": "Tenho! Vem cá, eu te dou pezinho e você pula primeiro.", "revisar": true},
+    {"id": "c2_s7_pularam_sucesso", "speaker": "Maria Fernanda", "text": "Consegui haha! A quadra tá todinha só pra gente!", "revisar": true},
+    {"id": "c2_s7_miguel_valeu", "speaker": "Miguel", "text": "Eu disse que valia a pena! Vem, vou pegar a bola.", "revisar": true},
+    {"id": "c2_s7_explicacao_1", "speaker": "Miguel", "text": "Vem cá, segura a bola assim... Deixa uma mão embaixo pra empurrar e a outra do lado pra apoiar.", "revisar": true},
+    {"id": "c2_s7_maria_nervosa", "speaker": "Maria Fernanda", "text": "Assim? Parece mais pesado do que quando você joga!", "revisar": true},
+    {"id": "c2_s7_ensino_proximo", "speaker": "Miguel", "text": "Relaxa o braço... Olha fixo no aro da cesta. Agora faz o movimento suave com o pulso.", "revisar": true},
+    {"id": "c2_s7_arremesso_acertou", "speaker": "Maria Fernanda", "text": "CAIU NA CESTA! Miguel, eu acertei!!", "revisar": true},
+    {"id": "c2_s7_comemoracao", "speaker": "Miguel", "text": "Você mandou muito bem! Aprendeu de primeira!", "revisar": true},
+    {"id": "c2_s7_pular_saida", "speaker": "Miguel", "text": "Agora a melhor parte: pular o portão de volta pra ir embora haha!", "revisar": true},
+    {"id": "c2_s7_maria_saida", "speaker": "Maria Fernanda", "text": "Haha agora eu já tô até craque em pular portão!", "revisar": true}
+  ],
+  "cena_08_caminhada_avo": [
+    {"id": "c2_s8_noite", "speaker": "Maria Fernanda", "text": "Já tá anoitecendo... Minha avó deve estar me esperando.", "revisar": true},
+    {"id": "c2_s8_miguel_acompanha", "speaker": "Miguel", "text": "Eu te levo até lá, faço questão.", "revisar": true},
+    {"id": "c2_s8_maria_obrigada", "speaker": "Maria Fernanda", "text": "Obrigada, Miguel. É logo ali na esquina.", "revisar": true}
+  ],
+  "cena_09_despedida": [
+    {"id": "c2_s9_chegada_portao", "speaker": "Maria Fernanda", "text": "É aqui na casa da minha avó...", "revisar": true},
+    {"id": "c2_s9_miguel_despedida", "speaker": "Miguel", "text": "Foi muito bom passar essa tarde com você.", "revisar": true},
+    {"id": "c2_s9_maria_abraço", "speaker": "Maria Fernanda", "text": "Eu adorei cada minuto, de verdade.", "revisar": true},
+    {"id": "c2_s9_selinho", "speaker": "", "text": "Um abraço apertado e acolhedor... seguido por um doce e inesquecível primeiro selinho.", "revisar": true},
+    {"id": "c2_s9_tchau_maria", "speaker": "Maria Fernanda", "text": "Até logo, Miguel...", "revisar": true},
+    {"id": "c2_s9_tchau_miguel", "speaker": "Miguel", "text": "Até logo, Maria...", "revisar": true}
+  ],
+  "cena_10_casa": [
+    {"id": "c2_s10_miguel_sorriso", "speaker": "Miguel", "text": "Cara... que tarde incrível.", "revisar": true}
+  ],
+  "cena_11_whatsapp": [
+    {"id": "c2_s11_msg_maria", "speaker": "Maria Fernanda", "text": "Obrigada pelo dia, eu gostei muito.", "revisar": true},
+    {"id": "c2_s11_miguel_pensamento", "speaker": "Miguel", "text": "Ela mandou mensagem... Que sentimento bom.", "revisar": true},
+    {"id": "c2_s11_fim", "speaker": "", "text": "E assim, aquele primeiro açaí e aquela bola na cesta marcaram o início de algo inesquecível...", "revisar": true}
+  ]
+}

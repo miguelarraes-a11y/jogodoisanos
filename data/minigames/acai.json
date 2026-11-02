@@ -1,0 +1,16 @@
+{
+  "_comentario": "Configuração do minigame de montar o açaí no primeiro encontro.",
+  "show_intro": true,
+  "max_complements": 4,
+  "sizes": ["300ml (Pequeno)", "500ml (Médio)", "700ml (Grande)"],
+  "bases": ["Açaí Tradicional", "Açaí com Banana", "Açaí com Morango"],
+  "complements": [
+    "Leite em Pó",
+    "Granola Crocante",
+    "Morangos Frescos",
+    "Banana Fatiada",
+    "Leite Condensado",
+    "Paçoca de Amendoim",
+    "Gotas de Chocolate"
+  ]
+}

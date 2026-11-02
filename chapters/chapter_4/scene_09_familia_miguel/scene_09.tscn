@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ch4s09sceneuid"]
+
+[ext_resource type="Script" path="res://chapters/chapter_4/scene_09_familia_miguel/scene_09.gd" id="1_ch4s9"]
+
+[node name="Scene09" type="Node"]
+script = ExtResource("1_ch4s9")

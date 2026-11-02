@@ -1,0 +1,51 @@
+{
+  "_comentario": "Falas do Capítulo 1 — A Primeira Mensagem. 'revisar': true = redação provisória para substituição posterior.",
+  "cena_01_depois_do_olhar": [
+    {"id": "c1_s1_maria_1", "speaker": "Maria Fernanda", "text": "Meninas... vocês viram aquele menino?", "revisar": true},
+    {"id": "c1_s1_maria_2", "speaker": "Maria Fernanda", "text": "Ele é bonito, né?", "revisar": true},
+    {"id": "c1_s1_prima_1", "speaker": "Prima", "text": "É o meu primo, o Miguel!", "revisar": true},
+    {"id": "c1_s1_prima_2", "speaker": "Prima", "text": "Segue ele no Instagram!", "revisar": true},
+    {"id": "c1_s1_ana_1", "speaker": "Ana Clara", "text": "Isso! Segue logo antes que você esqueça!", "revisar": true},
+    {"id": "c1_s1_maria_3", "speaker": "Maria Fernanda", "text": "Deixa eu ver aqui no celular...", "revisar": true}
+  ],
+  "cena_02_instagram": [
+    {"id": "c1_s2_maria_busca", "speaker": "Maria Fernanda", "text": "Achei o perfil dele... Deixa eu enviar a solicitação.", "revisar": true},
+    {"id": "c1_s2_maria_enviou", "speaker": "Maria Fernanda", "text": "Pronto, solicitação enviada! Agora é esperar ele aceitar...", "revisar": true}
+  ],
+  "cena_03_festa_amigo": [
+    {"id": "c1_s3_amigo_1", "speaker": "Amigo", "text": "E aí Miguel! Chegou bem na hora do churrasco!", "revisar": true},
+    {"id": "c1_s3_miguel_1", "speaker": "Miguel", "text": "E aí, cara! Festa animada hoje.", "revisar": true},
+    {"id": "c1_s3_miguel_celular", "speaker": "Miguel", "text": "Deixa eu dar uma olhada no celular rapidinho...", "revisar": true},
+    {"id": "c1_s3_miguel_notif", "speaker": "Miguel", "text": "Ué... Maria Fernanda enviou uma solicitação pra me seguir?", "revisar": true},
+    {"id": "c1_s3_miguel_aceitou", "speaker": "Miguel", "text": "Aceita! Aquela menina lá da rua...", "revisar": true}
+  ],
+  "cena_05_whatsapp": [
+    {"id": "c1_s5_notif", "speaker": "Miguel", "text": "Chegou uma notificação no WhatsApp... Deixa eu abrir.", "revisar": true},
+    {"id": "c1_s5_msg_maria_1", "speaker": "Maria Fernanda", "text": "Oi, Miguel! Tudo bem? Minha prima me passou seu número.", "revisar": true},
+    {"id": "c1_s5_opt_1a", "speaker": "Miguel", "text": "Oi, Maria Fernanda! Tudo bem e com você? Que bom que você chamou!", "revisar": true},
+    {"id": "c1_s5_opt_1b", "speaker": "Miguel", "text": "Oi! Tudo bem sim! Lembro de ter te visto naquele dia do Cosme e Damião.", "revisar": true},
+    {"id": "c1_s5_msg_maria_2", "speaker": "Maria Fernanda", "text": "Eu te vi chutando aquele abacate na rua haha! Achei engraçado.", "revisar": true},
+    {"id": "c1_s5_opt_2a", "speaker": "Miguel", "text": "Pois é, eu tava tentando abrir no chute mas não deu muito certo haha!", "revisar": true},
+    {"id": "c1_s5_opt_2b", "speaker": "Miguel", "text": "Tava distraído na descida pra casa, nem percebi vocês chegando!", "revisar": true},
+    {"id": "c1_s5_msg_maria_3", "speaker": "Maria Fernanda", "text": "A gente conseguiu pegar bastante doce naquele dia!", "revisar": true}
+  ],
+  "cena_06_uno": [
+    {"id": "c1_s6_convite_uno", "speaker": "Maria Fernanda", "text": "Bora jogar uma partida de UNO pelo celular?", "revisar": true},
+    {"id": "c1_s6_miguel_topa", "speaker": "Miguel", "text": "Bora! Só aviso que eu não costumo perder fácil, hein!", "revisar": true},
+    {"id": "c1_s6_maria_desafio", "speaker": "Maria Fernanda", "text": "É o que vamos ver! Já vou abrindo a partida.", "revisar": true},
+    {"id": "c1_s6_pos_partida_miguel", "speaker": "Miguel", "text": "Caramba, você joga muito bem! Não deu mole nenhuma rodada.", "revisar": true},
+    {"id": "c1_s6_pos_partida_maria", "speaker": "Maria Fernanda", "text": "Eu avisei que você não ia ter chance haha!", "revisar": true}
+  ],
+  "cena_07_montagem": [
+    {"id": "c1_s7_narrador_1", "speaker": "", "text": "Os dias foram passando...", "revisar": true},
+    {"id": "c1_s7_narrador_2", "speaker": "", "text": "As conversas que começaram tímidas foram se tornando cada vez mais frequentes.", "revisar": true},
+    {"id": "c1_s7_narrador_3", "speaker": "", "text": "Entre risadas, piadas e partidas de UNO, uma conexão genuína ia se formando.", "revisar": true}
+  ],
+  "cena_08_convite_acai": [
+    {"id": "c1_s8_miguel_pensamento", "speaker": "Miguel", "text": "A gente já tá conversando há um tempo... Queria muito ver ela de novo pessoalmente.", "revisar": true},
+    {"id": "c1_s8_miguel_mensagem", "speaker": "Miguel", "text": "Quer ir tomar um açaí comigo?", "revisar": true},
+    {"id": "c1_s8_maria_resposta", "speaker": "Maria Fernanda", "text": "Quero sim!", "revisar": true},
+    {"id": "c1_s8_miguel_reacao", "speaker": "Miguel", "text": "Ela aceitou! Agora é marcar o dia.", "revisar": true},
+    {"id": "c1_s8_fim_capitulo", "speaker": "", "text": "E assim, a primeira mensagem abriu as portas para o primeiro encontro...", "revisar": true}
+  ]
+}

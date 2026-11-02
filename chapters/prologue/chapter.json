@@ -1,0 +1,37 @@
+{
+  "id": "prologue",
+  "title": "PRÓLOGO — ONDE TUDO COMEÇOU",
+  "date": "2024-09-27",
+  "scenes": [
+    {
+      "id": "scene_01",
+      "name": "Um dia comum",
+      "path": "res://chapters/prologue/scene_01_um_dia_comum/scene_01.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_02",
+      "name": "A manhã de Miguel",
+      "path": "res://chapters/prologue/scene_02_manha_miguel/scene_02.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_03",
+      "name": "A tarde de Maria Fernanda",
+      "path": "res://chapters/prologue/scene_03_tarde_maria/scene_03.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_04",
+      "name": "O abacate",
+      "path": "res://chapters/prologue/scene_04_abacate/scene_04.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_05",
+      "name": "O primeiro olhar",
+      "path": "res://chapters/prologue/scene_05_primeiro_olhar/scene_05.tscn",
+      "status": "concluida"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ch4s11sceneuid"]
+
+[ext_resource type="Script" path="res://chapters/chapter_4/scene_11_encerramento/scene_11.gd" id="1_ch4s11"]
+
+[node name="Scene11" type="Node"]
+script = ExtResource("1_ch4s11")

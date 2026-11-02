@@ -1,0 +1,73 @@
+{
+  "id": "chapter_2",
+  "title": "CAPÍTULO 2 — O PRIMEIRO ENCONTRO",
+  "date": "2024-10",
+  "scenes": [
+    {
+      "id": "scene_01",
+      "name": "O Encontro",
+      "path": "res://chapters/chapter_2/scene_01_encontro/scene_01.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_02",
+      "name": "Caminhando juntos até o açaí",
+      "path": "res://chapters/chapter_2/scene_02_caminhada_acai/scene_02.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_03",
+      "name": "Açaiteria e Minigame do Açaí",
+      "path": "res://chapters/chapter_2/scene_03_acaiteria/scene_03.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_04",
+      "name": "Conversa no Açaí",
+      "path": "res://chapters/chapter_2/scene_04_conversa_acai/scene_04.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_05",
+      "name": "Decisão de ir até a quadra",
+      "path": "res://chapters/chapter_2/scene_05_decisao_quadra/scene_05.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_06",
+      "name": "Caminhada até a quadra",
+      "path": "res://chapters/chapter_2/scene_06_caminhada_quadra/scene_06.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_07",
+      "name": "Aula de Basquete",
+      "path": "res://chapters/chapter_2/scene_07_aula_basquete/scene_07.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_08",
+      "name": "Caminhada até a casa da avó",
+      "path": "res://chapters/chapter_2/scene_08_caminhada_avo/scene_08.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_09",
+      "name": "A Despedida e o Primeiro Selinho",
+      "path": "res://chapters/chapter_2/scene_09_despedida/scene_09.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_10",
+      "name": "Felizes em Casa",
+      "path": "res://chapters/chapter_2/scene_10_felizes_em_casa/scene_10.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_11",
+      "name": "A Mensagem de Agradecimento",
+      "path": "res://chapters/chapter_2/scene_11_mensagem_agradecimento/scene_11.tscn",
+      "status": "concluida"
+    }
+  ]
+}

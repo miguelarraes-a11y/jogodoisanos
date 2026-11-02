@@ -1,0 +1,55 @@
+{
+  "id": "chapter_3",
+  "title": "CAPÍTULO 3 — MAIS PERTO DE VOCÊ",
+  "date": "2024-10",
+  "scenes": [
+    {
+      "id": "scene_01",
+      "name": "Marcando de se encontrar",
+      "path": "res://chapters/chapter_3/scene_01_marcando_encontro/scene_01.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_02",
+      "name": "O novo encontro",
+      "path": "res://chapters/chapter_3/scene_02_o_novo_encontro/scene_02.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_03",
+      "name": "O banco de pedra",
+      "path": "res://chapters/chapter_3/scene_03_banco_de_pedra/scene_03.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_04",
+      "name": "Tirando fotos",
+      "path": "res://chapters/chapter_3/scene_04_tirando_fotos/scene_04.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_05",
+      "name": "O beijo",
+      "path": "res://chapters/chapter_3/scene_05_o_beijo/scene_05.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_06",
+      "name": "Indo para a casa da avó dela",
+      "path": "res://chapters/chapter_3/scene_06_caminhada_avo/scene_06.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_07",
+      "name": "Despedida na casa da avó",
+      "path": "res://chapters/chapter_3/scene_07_despedida_avo/scene_07.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_08",
+      "name": "Encerramento do capítulo",
+      "path": "res://chapters/chapter_3/scene_08_encerramento/scene_08.tscn",
+      "status": "concluida"
+    }
+  ]
+}

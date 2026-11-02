@@ -1,0 +1,50 @@
+{
+  "_comentario": "Falas do jogo. 'revisar': true = redação provisória, troque pelo texto original quando desejar.",
+  "cena_01_um_dia_comum": [
+    {"id": "s1_narrador_1", "speaker": "", "text": "27 de setembro de 2024. Uma manhã que parecia como qualquer outra...", "revisar": true},
+    {"id": "s1_narrador_2", "speaker": "", "text": "Duas rotinas acontecendo ao mesmo tempo, sem imaginar o que aquele dia reservava.", "revisar": true},
+    {"id": "s1_miguel_acorda", "speaker": "Miguel", "text": "Mais um dia... O pessoal combinou de bater uma bola na quadra hoje de manhã.", "revisar": true},
+    {"id": "s1_maria_acorda", "speaker": "Maria Fernanda", "text": "Bom dia, Kovak... Hoje tem aula, e depois doces de Cosme e Damião!", "revisar": true}
+  ],
+  "cena_02_manha_miguel": [
+    {"id": "s2_miguel_saindo", "speaker": "Miguel", "text": "O sol já tá forte. Vou descendo até a quadra coberta pra treinar uns arremessos.", "revisar": true},
+    {"id": "s2_miguel_quadra", "speaker": "Miguel", "text": "Cheguei. A quadra tá tranquila essa hora. Hora de calibrar a mão.", "revisar": true},
+    {"id": "s2_miguel_fim", "speaker": "Miguel", "text": "Treino finalizado! O calor tá apertando, melhor ir voltando pra casa.", "revisar": true}
+  ],
+  "cena_03_cosme_damiao": [
+    {"id": "s3_escola_saida_1", "speaker": "Maria Fernanda", "text": "Finalmente bateu o sinal! Fim da aula.", "revisar": true},
+    {"id": "s3_escola_saida_2", "speaker": "Ana Clara", "text": "Mafe! Gabriele! Hoje é 27 de setembro, dia de São Cosme e Damião!", "revisar": true},
+    {"id": "s3_escola_saida_3", "speaker": "Gabriele", "text": "O bairro inteiro vai estar distribuindo saquinhos de doces na porta de casa.", "revisar": true},
+    {"id": "s3_escola_saida_4", "speaker": "Ana Clara", "text": "Bora apostar quem consegue pegar mais saquinhos pelas ruas?", "revisar": true},
+    {"id": "s3_escola_saida_5", "speaker": "Maria Fernanda", "text": "Desafio aceito! Vamos lá!", "revisar": true},
+    {"id": "morador_entrega", "speaker": "Morador", "text": "Olha o saquinho de Cosme e Damião! Peguem com calma, meninas!", "revisar": true},
+    {"id": "morador_entrega_2", "speaker": "Moradora", "text": "Viva Cosme e Damião! Tem paçoca, pirulito e mariola no saquinho!", "revisar": true},
+    {"id": "morador_fim", "speaker": "Morador", "text": "Acabaram os saquinhos por aqui, crianças!", "revisar": true},
+    {"id": "s3_pos_corrida_1", "speaker": "Ana Clara", "text": "Nossa, corremos bastante! O pessoal do bairro caprichou nos saquinhos hoje.", "revisar": true},
+    {"id": "s3_pos_corrida_2", "speaker": "Gabriele", "text": "Minha sacola tá pesada! Bastante doce pra dividir.", "revisar": true},
+    {"id": "s3_pos_corrida_3", "speaker": "Maria Fernanda", "text": "Foi divertido demais! Agora vou descendo a rua pra casa.", "revisar": true}
+  ],
+  "cena_04_abacate": [
+    {"id": "s4_miguel_descendo", "speaker": "Miguel", "text": "Descendo a rua... Ué, o que é aquilo caído ali no asfalto?", "revisar": true},
+    {"id": "s4_miguel_abacate", "speaker": "Miguel", "text": "Um abacate grandão... Deve ter caído de algum quintal. Deixa eu chutar pra ver se abre.", "revisar": true},
+    {"id": "s4_miguel_chute", "speaker": "Miguel", "text": "Quase abriu... Mais um chute e racha.", "revisar": true},
+    {"id": "prima_chama_1", "speaker": "Prima", "text": "Miguel!", "revisar": true},
+    {"id": "ana_clara_chama_1", "speaker": "Prima", "text": "Miguel!", "revisar": true},
+    {"id": "s4_miguel_ouve", "speaker": "Miguel", "text": "Hein? Pareceu alguém me chamando...", "revisar": true},
+    {"id": "prima_chama_2", "speaker": "Prima", "text": "Miguel! Ô, Miguel!", "revisar": true},
+    {"id": "ana_clara_chama_2", "speaker": "Prima", "text": "Miguel! Ô, Miguel!", "revisar": true},
+    {"id": "s4_miguel_vira", "speaker": "Miguel", "text": "É a voz da minha prima. Deixa eu me virar pra ver.", "revisar": true}
+  ],
+  "cena_05_primeiro_olhar": [
+    {"id": "s5_prima_pergunta", "speaker": "Prima", "text": "Sua mãe tá dando doce lá na sua casa, Miguel?", "revisar": true},
+    {"id": "s5_miguel_responde", "speaker": "Miguel", "text": "Não, lá em casa ela não tá dando doce não.", "revisar": true},
+    {"id": "s5_prima_fala", "speaker": "Prima", "text": "Ah, tá... A gente tava procurando onde ainda tinha saquinho.", "revisar": true}
+  ],
+  "dev_teste": [
+    {"id": "dev_morador", "speaker": "Morador", "text": "[TESTE] Aqui um morador entregaria os saquinhos de doces."},
+    {"id": "dev_crianca", "speaker": "Criança", "text": "[TESTE] Texto de teste da caixa de diálogo."},
+    {"id": "dev_ana", "speaker": "Ana Clara", "text": "[TESTE] Fala provisória só para testar a caixa de texto."},
+    {"id": "dev_ana_2", "speaker": "Ana Clara", "text": "[TESTE] Segunda caixa: aperte a tecla de interação para avançar."},
+    {"id": "dev_gabriele", "speaker": "Gabriele", "text": "[TESTE] Fala provisória da Gabriele."}
+  ]
+}

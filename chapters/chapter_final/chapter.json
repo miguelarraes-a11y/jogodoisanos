@@ -1,0 +1,36 @@
+{
+  "id": "chapter_final",
+  "title": "CAPÍTULO FINAL — A MELHOR ESCOLHA DA MINHA VIDA",
+  "scenes": [
+    {
+      "id": "scene_01",
+      "name": "O pedido de namoro",
+      "path": "res://chapters/chapter_final/scene_01_o_pedido_de_namoro/scene_01.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_02",
+      "name": "Explosão de felicidade",
+      "path": "res://chapters/chapter_final/scene_02_explosao_de_felicidade/scene_02.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_03",
+      "name": "O primeiro dia (03/11/2024)",
+      "path": "res://chapters/chapter_final/scene_03_o_primeiro_dia/scene_03.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_04",
+      "name": "Nossa história e comemoração de 2 anos",
+      "path": "res://chapters/chapter_final/scene_04_nossa_historia_e_dois_anos/scene_04.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_08",
+      "name": "Encerramento definitivo",
+      "path": "res://chapters/chapter_final/scene_08_encerramento_definitivo/scene_08.tscn",
+      "status": "concluida"
+    }
+  ]
+}

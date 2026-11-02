@@ -1,0 +1,55 @@
+{
+  "id": "chapter_1",
+  "title": "CAPÍTULO 1 — A PRIMEIRA MENSAGEM",
+  "date": "2024-10",
+  "scenes": [
+    {
+      "id": "scene_01",
+      "name": "Depois do primeiro olhar",
+      "path": "res://chapters/chapter_1/scene_01_depois_do_olhar/scene_01.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_02",
+      "name": "A solicitação do Instagram",
+      "path": "res://chapters/chapter_1/scene_02_instagram_solicitacao/scene_02.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_03",
+      "name": "A festa do amigo",
+      "path": "res://chapters/chapter_1/scene_03_festa_amigo/scene_03.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_04",
+      "name": "Alguns dias depois...",
+      "path": "res://chapters/chapter_1/scene_04_passagem_tempo/scene_04.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_05",
+      "name": "A primeira mensagem",
+      "path": "res://chapters/chapter_1/scene_05_primeira_mensagem/scene_05.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_06",
+      "name": "A partida de UNO",
+      "path": "res://chapters/chapter_1/scene_06_uno/scene_06.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_07",
+      "name": "As conversas continuam",
+      "path": "res://chapters/chapter_1/scene_07_conversas_continuam/scene_07.tscn",
+      "status": "concluida"
+    },
+    {
+      "id": "scene_08",
+      "name": "O convite do açaí",
+      "path": "res://chapters/chapter_1/scene_08_convite_acai/scene_08.tscn",
+      "status": "concluida"
+    }
+  ]
+}
